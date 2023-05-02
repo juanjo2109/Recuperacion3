@@ -33,7 +33,7 @@ public class EmpleadoVista {
             // Los datos que devuelve la consulta no son directamente cargables en nuestro objeto
             while (resultadoConsulta.next()) {
                 datosResultadoConsulta.add(new Empleado(
-                        resultadoConsulta.getString("employeeNumber"),
+                        resultadoConsulta.getInt("employeeNumber"),
                         resultadoConsulta.getString("lastName"),
                         resultadoConsulta.getString("firstName"),
                         resultadoConsulta.getString("extension"),

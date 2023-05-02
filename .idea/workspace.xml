@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be055767-bcd9-45ac-90dc-5ca1b640ae79" name="Changes" comment="mod2">
+    <list default="true" id="be055767-bcd9-45ac-90dc-5ca1b640ae79" name="Changes" comment="mod3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/EmpleadoVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/EmpleadoVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo2/empleado-vista.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo2/empleado-vista.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,11 @@
     &quot;last_directory_selection&quot;: &quot;C:/Users/usuario/IdeaProjects/demo2/src/main/java/com/example/demo2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +63,7 @@
       <workItem from="1682416221170" duration="2808000" />
       <workItem from="1682663702484" duration="4245000" />
       <workItem from="1682669241862" duration="2761000" />
-      <workItem from="1683020023802" duration="2466000" />
+      <workItem from="1683020023802" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="Res1">
       <created>1680253680858</created>
@@ -103,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682671996530</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mod3">
+      <created>1683022735249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683022735249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +137,7 @@
     <MESSAGE value="Res3" />
     <MESSAGE value="mod1" />
     <MESSAGE value="mod2" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod2" />
+    <MESSAGE value="mod3" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod3" />
   </component>
 </project>
