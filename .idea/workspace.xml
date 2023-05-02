@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be055767-bcd9-45ac-90dc-5ca1b640ae79" name="Changes" comment="mod1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/EmpleadoVista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo2/altaempleado.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo2/empleado-vista.fxml" afterDir="false" />
+    <list default="true" id="be055767-bcd9-45ac-90dc-5ca1b640ae79" name="Changes" comment="mod2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo2/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/EmpleadoVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/EmpleadoVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo2/empleado-vista.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo2/empleado-vista.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,8 @@
       <workItem from="1682058142852" duration="11353000" />
       <workItem from="1682416221170" duration="2808000" />
       <workItem from="1682663702484" duration="4245000" />
-      <workItem from="1682669241862" duration="2128000" />
+      <workItem from="1682669241862" duration="2761000" />
+      <workItem from="1683020023802" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="Res1">
       <created>1680253680858</created>
@@ -99,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682417460603</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mod2">
+      <created>1682671996530</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682671996530</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +125,7 @@
     <MESSAGE value="Res2" />
     <MESSAGE value="Res3" />
     <MESSAGE value="mod1" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod1" />
+    <MESSAGE value="mod2" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod2" />
   </component>
 </project>

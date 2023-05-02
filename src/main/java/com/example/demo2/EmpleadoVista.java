@@ -23,8 +23,8 @@ public class EmpleadoVista {
             // Nos conectamos
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
             String SQL = "SELECT * "
-                    + "FROM products "
-                    + "ORDER By productName";
+                    + "FROM employee "
+                    + "ORDER By lastName";
 
             // Ejecutamos la consulta y nos devuelve una matriz de filas (registros) y columnas (datos)
             ResultSet resultadoConsulta = conexionBBDD.createStatement().executeQuery(SQL);
@@ -33,15 +33,14 @@ public class EmpleadoVista {
             // Los datos que devuelve la consulta no son directamente cargables en nuestro objeto
             while (resultadoConsulta.next()) {
                 datosResultadoConsulta.add(new Empleado(
-                        resultadoConsulta.getString("productCode"),
-                        resultadoConsulta.getString("productName"),
-                        resultadoConsulta.getString("productLine"),
-                        resultadoConsulta.getString("productScale"),
-                        resultadoConsulta.getString("productVendor"),
-                        resultadoConsulta.getString("productDescription"),
-                        resultadoConsulta.getInt("quantityInStock"),
-                        resultadoConsulta.getDouble("buyPrice"),
-                        resultadoConsulta.getDouble("MSRP"))
+                        resultadoConsulta.getString("employeeNumber"),
+                        resultadoConsulta.getString("lastName"),
+                        resultadoConsulta.getString("firstName"),
+                        resultadoConsulta.getString("extension"),
+                        resultadoConsulta.getString("email"),
+                        resultadoConsulta.getString("officeCode"),
+                        resultadoConsulta.getInt("reportsTo"),
+                        resultadoConsulta.getString("jobTitle"))
                 );
                 System.out.println("Row [1] added " + resultadoConsulta.toString());
             }
