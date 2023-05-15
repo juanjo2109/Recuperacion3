@@ -7,12 +7,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EmpleadoVista">
    <children>
-      <TableView layoutX="7.0" layoutY="193.0" prefHeight="200.0" prefWidth="593.0">
+      <TableView fx:id="tvEmpleado" layoutY="194.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button fx:id="altavent" layoutX="453.0" layoutY="32.0" mnemonicParsing="false" />
+      <Button fx:id="altavent" layoutX="453.0" layoutY="32.0" mnemonicParsing="false" text="+" />
    </children>
 </Pane>

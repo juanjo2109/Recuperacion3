@@ -3,6 +3,7 @@ package com.example.demo2;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,6 +17,13 @@ public class EmpleadoVista {
     private final String servidor = "jdbc:mariadb://localhost:5555/noinch?useSSL=false";
 
     private Connection conexionBBDD;
+    @javafx.fxml.FXML
+    private TableView tvEmpleado;
+
+    public void initialize(){
+            obtenerEmpleados();
+
+    }
     public ObservableList obtenerEmpleados() {
 
         ObservableList datosResultadoConsulta = FXCollections.observableArrayList();
