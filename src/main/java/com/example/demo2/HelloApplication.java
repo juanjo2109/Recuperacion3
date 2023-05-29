@@ -14,7 +14,6 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 640, 700);
         stage.setTitle("alta Objetos");
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.show();
     }
 

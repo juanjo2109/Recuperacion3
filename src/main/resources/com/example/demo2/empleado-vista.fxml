@@ -5,14 +5,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EmpleadoVista">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EmpleadoVista">
    <children>
-      <TableView fx:id="tvEmpleado" layoutY="194.0" prefHeight="200.0" prefWidth="600.0">
+      <TableView fx:id="tvEmpleado" layoutY="200.0" prefHeight="200.0" prefWidth="665.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="tcnumempcol" prefWidth="131.0" text="employeenNumber" />
+          <TableColumn fx:id="tcapellido" minWidth="0.0" prefWidth="79.0" text="lastName" />
+            <TableColumn fx:id="tcnombre" minWidth="0.0" prefWidth="79.0" text="firstName" />
+            <TableColumn fx:id="tcextension" prefWidth="75.0" text="extension" />
+            <TableColumn fx:id="tcemail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="tcofficecode" prefWidth="75.0" text="officeCode" />
+            <TableColumn fx:id="tcreport" prefWidth="75.0" text="reportsTo" />
+            <TableColumn fx:id="tcjobtitle" prefWidth="75.0" text="jobTitle" />
         </columns>
       </TableView>
-      <Button fx:id="altavent" layoutX="453.0" layoutY="32.0" mnemonicParsing="false" text="+" />
+      <Button fx:id="altavent" layoutX="453.0" layoutY="32.0" mnemonicParsing="false" onAction="#altaempleado" text="+" />
    </children>
 </Pane>

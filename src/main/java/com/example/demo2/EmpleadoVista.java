@@ -2,8 +2,12 @@ package com.example.demo2;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,10 +23,39 @@ public class EmpleadoVista {
     private Connection conexionBBDD;
     @javafx.fxml.FXML
     private TableView tvEmpleado;
+    private ObservableList<Empleado> datos;
+    @javafx.fxml.FXML
+    private TableColumn tcnumempcol;
+    @javafx.fxml.FXML
+    private TableColumn tcextension;
+    @javafx.fxml.FXML
+    private TableColumn tcemail;
+    @javafx.fxml.FXML
+    private TableColumn tcofficecode;
+    @javafx.fxml.FXML
+    private TableColumn tcreport;
+    @javafx.fxml.FXML
+    private TableColumn tcjobtitle;
+    @javafx.fxml.FXML
+    private TableColumn tcapellido;
+    @javafx.fxml.FXML
+    private TableColumn tcnombre;
 
     public void initialize(){
-            obtenerEmpleados();
+        cargarDatosTabla();
 
+    }
+    private void cargarDatosTabla () {
+         datos = obtenerEmpleados();
+         tcnumempcol.setCellValueFactory(new PropertyValueFactory<Empleado, Integer>("employeeNumber"));
+         tcapellido.setCellValueFactory(new PropertyValueFactory<Empleado,String>("lastName"));
+         tcnombre.setCellValueFactory(new PropertyValueFactory<Empleado,String>("firstName"));
+         tcextension.setCellValueFactory(new PropertyValueFactory<Empleado,String>("extension"));
+         tcemail.setCellValueFactory(new PropertyValueFactory<Empleado, String>("email"));
+         tcofficecode.setCellValueFactory(new PropertyValueFactory<Empleado,String>("officeCode"));
+         tcreport.setCellValueFactory(new PropertyValueFactory<Empleado,Integer>("reportsTo"));
+         tcjobtitle.setCellValueFactory(new PropertyValueFactory<Empleado,String>("jobTitle"));
+         tvEmpleado.setItems(datos);
     }
     public ObservableList obtenerEmpleados() {
 
@@ -31,7 +64,7 @@ public class EmpleadoVista {
             // Nos conectamos
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
             String SQL = "SELECT * "
-                    + "FROM employee "
+                    + "FROM employees "
                     + "ORDER By lastName";
 
             // Ejecutamos la consulta y nos devuelve una matriz de filas (registros) y columnas (datos)
@@ -62,4 +95,8 @@ public class EmpleadoVista {
         }
     }
 
+    @javafx.fxml.FXML
+    public void altaempleado(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader=new FXMLLoader(EmpleadoVista.class.getResource("altaempleado.fxml"));
+    }
 }
