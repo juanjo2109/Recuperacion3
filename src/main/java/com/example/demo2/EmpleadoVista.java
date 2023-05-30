@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -43,6 +44,8 @@ public class EmpleadoVista {
     private TableColumn tcapellido;
     @javafx.fxml.FXML
     private TableColumn tcnombre;
+    @javafx.fxml.FXML
+    private Button reload;
 
     public void initialize(){
         cargarDatosTabla();
@@ -101,7 +104,15 @@ public class EmpleadoVista {
     @javafx.fxml.FXML
     public void altaempleado(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader=new FXMLLoader(EmpleadoVista.class.getResource("altaempleado.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 700);
+       Parent root1 = (Parent) fxmlLoader.load();
+       Stage stage= new Stage();
+       stage.setScene(new Scene(root1));
+       stage.show();
 
+    }
+
+    @javafx.fxml.FXML
+    public void refrescar(ActionEvent actionEvent) {
+        cargarDatosTabla();
     }
 }
