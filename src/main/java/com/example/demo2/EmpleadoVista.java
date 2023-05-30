@@ -4,11 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -96,7 +99,9 @@ public class EmpleadoVista {
     }
 
     @javafx.fxml.FXML
-    public void altaempleado(ActionEvent actionEvent) {
+    public void altaempleado(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader=new FXMLLoader(EmpleadoVista.class.getResource("altaempleado.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 700);
+
     }
 }
