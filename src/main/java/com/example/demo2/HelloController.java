@@ -42,7 +42,7 @@ public class HelloController {
 
 
 
-    public void altaEmpleado() {
+    public Boolean altaEmpleado() {
         try {
             // Nos conectamos
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
