@@ -19,7 +19,9 @@
             <TableColumn fx:id="tcjobtitle" prefWidth="75.0" text="jobTitle" />
         </columns>
       </TableView>
-      <Button fx:id="altavent" layoutX="453.0" layoutY="32.0" mnemonicParsing="false" onAction="#altaempleado" text="Añadir" />
-      <Button fx:id="reload" layoutX="497.0" layoutY="32.0" mnemonicParsing="false" onAction="#refrescar" text="Recargar pagina" />
+      <Button fx:id="altavent" layoutX="576.0" layoutY="38.0" mnemonicParsing="false" onAction="#altaempleado" text="+" />
+      <Button fx:id="reload" layoutX="539.0" layoutY="38.0" mnemonicParsing="false" onAction="#refrescar" text="🔃" />
+      <Button fx:id="borrado" layoutX="543.0" layoutY="81.0" mnemonicParsing="false" text="-" />
+      <Button fx:id="edicion" layoutX="574.0" layoutY="81.0" mnemonicParsing="false" text="✏️" />
    </children>
 </Pane>
