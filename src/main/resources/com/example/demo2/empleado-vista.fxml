@@ -21,7 +21,7 @@
       </TableView>
       <Button fx:id="altavent" layoutX="576.0" layoutY="38.0" mnemonicParsing="false" onAction="#altaempleado" text="+" />
       <Button fx:id="reload" layoutX="539.0" layoutY="38.0" mnemonicParsing="false" onAction="#refrescar" text="🔃" />
-      <Button fx:id="borrado" layoutX="543.0" layoutY="81.0" mnemonicParsing="false" text="-" />
-      <Button fx:id="edicion" layoutX="574.0" layoutY="81.0" mnemonicParsing="false" text="✏️" />
+      <Button fx:id="borrado" layoutX="543.0" layoutY="81.0" mnemonicParsing="false" onAction="#borrar" text="-" />
+      <Button fx:id="edicion" layoutX="574.0" layoutY="81.0" mnemonicParsing="false" onAction="#edicion" text="✏️" />
    </children>
 </Pane>

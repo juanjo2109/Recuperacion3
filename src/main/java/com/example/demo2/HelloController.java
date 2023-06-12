@@ -40,9 +40,11 @@ public class HelloController {
     @FXML
     private GridPane general;
 
-
+public  boolean altaauX=true;
+    public  boolean actualizarauX=true;
 
     public Boolean altaEmpleado() {
+        int registrosAfectadosConsulta = 0;
         try {
             // Nos conectamos
             conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
@@ -71,13 +73,18 @@ public class HelloController {
 
             // Ejecutamos la consulta preparada (con las ventajas de seguridad y velocidad en el servidor de BBDD
             // nos devuelve el número de registros afectados. Al ser un Insert nos debe devolver 1 si se ha hecho correctamente
-            st.executeUpdate();
+            registrosAfectadosConsulta = st.executeUpdate();
             st.close();
             conexionBBDD.close();
-
+            if (registrosAfectadosConsulta == 1) {
+                return true;
+            } else {
+                return false;
+            }
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error:" + e.toString());
+            return false;
         }
     }
 

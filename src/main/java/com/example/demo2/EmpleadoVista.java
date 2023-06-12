@@ -46,6 +46,10 @@ public class EmpleadoVista {
     private TableColumn tcnombre;
     @javafx.fxml.FXML
     private Button reload;
+    @javafx.fxml.FXML
+    private Button borrado;
+    @javafx.fxml.FXML
+    private Button edicion;
 
     public void initialize(){
         cargarDatosTabla();
@@ -114,5 +118,14 @@ public class EmpleadoVista {
     @javafx.fxml.FXML
     public void refrescar(ActionEvent actionEvent) {
         cargarDatosTabla();
+    }
+
+    @javafx.fxml.FXML
+    public void borrar(ActionEvent actionEvent) {
+        
+    }
+
+    @javafx.fxml.FXML
+    public void edicion(ActionEvent actionEvent) {
     }
 }
