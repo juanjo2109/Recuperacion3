@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -122,6 +123,16 @@ public class EmpleadoVista {
 
     @javafx.fxml.FXML
     public void borrar(ActionEvent actionEvent) {
+        Empleado empleadoaux = (Empleado) tvEmpleado.getSelectionModel().getSelectedItem();
+       if (empleadoaux==null){
+           Alert alert = new Alert(Alert.AlertType.ERROR);
+           alert.setHeaderText(null);
+           alert.setTitle("Fila no seleccionada");
+           alert.setContentText("No has seleccionado ninguna fila.");
+           alert.showAndWait();
+       }else {
+
+       }
         
     }
 
