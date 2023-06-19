@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EmpleadoVista">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EmpleadoVista">
    <children>
-      <TableView fx:id="tvEmpleado" layoutY="200.0" prefHeight="200.0" prefWidth="673.0">
+      <TableView fx:id="tvEmpleado" layoutY="66.0" prefHeight="334.0" prefWidth="664.0">
         <columns>
           <TableColumn fx:id="tcnumempcol" prefWidth="131.0" text="employeenNumber" />
           <TableColumn fx:id="tcapellido" minWidth="0.0" prefWidth="79.0" text="lastName" />
@@ -19,9 +21,18 @@
             <TableColumn fx:id="tcjobtitle" prefWidth="75.0" text="jobTitle" />
         </columns>
       </TableView>
-      <Button fx:id="altavent" layoutX="586.0" layoutY="38.0" mnemonicParsing="false" onAction="#altaempleado" prefHeight="25.0" prefWidth="36.0" text="+" />
-      <Button fx:id="reload" layoutX="531.0" layoutY="38.0" mnemonicParsing="false" onAction="#refrescar" prefHeight="25.0" prefWidth="36.0" text="🔃" />
-      <Button fx:id="borrado" layoutX="528.0" layoutY="81.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="36.0" text="-" />
-      <Button fx:id="edicion" layoutX="590.0" layoutY="81.0" mnemonicParsing="false" onAction="#edicion" prefHeight="19.0" prefWidth="36.0" text="✏️" />
+      <Button fx:id="altavent" layoutX="46.0" layoutY="14.0" mnemonicParsing="false" onAction="#altaempleado" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="reload" layoutX="219.0" layoutY="14.0" mnemonicParsing="false" onAction="#refrescar" prefHeight="25.0" prefWidth="36.0" text="🔃" />
+      <Button fx:id="borrado" layoutX="102.0" layoutY="14.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="edicion" layoutX="166.0" layoutY="14.0" mnemonicParsing="false" onAction="#edicion" prefHeight="19.0" prefWidth="36.0" text="✏️" />
+      <Label layoutX="43.0" layoutY="39.0" text="Agregar" />
+      <Label layoutX="99.0" layoutY="39.0" text="Eliminar" />
+      <Label layoutX="169.0" layoutY="39.0" text="Editar" />
+      <Label layoutX="213.0" layoutY="39.0" text="Refrescar" />
+      <Label layoutX="406.0" layoutY="14.0" prefHeight="25.0" prefWidth="258.0" text="EMPLEADOS" textAlignment="CENTER">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
