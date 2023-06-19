@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class EmpleadoVista {
@@ -132,8 +133,38 @@ public class EmpleadoVista {
            alert.showAndWait();
        }else {
 
+
+               int registrosAfectadosConsulta = 0;
+
+               try {
+                   // Nos conectamos
+                   conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
+                   String SQL = "DELETE FROM employee "
+                           + " WHERE employeenumber =  ";
+
+                   PreparedStatement st = conexionBBDD.prepareStatement(SQL);
+
+                   st.setString(1, String.valueOf(empleadoaux.getEmployeeNumber()));
+
+                   // Ejecutamos la consulta preparada (con las ventajas de seguridad y velocidad en el servidor de BBDD
+                   // nos devuelve el número de registros afectados. Al ser un Delete nos debe devolver 1 si se ha hecho correctamente
+                   registrosAfectadosConsulta = st.executeUpdate();
+                   st.close();
+                   conexionBBDD.close();
+
+                   if (registrosAfectadosConsulta == 1) {
+
+                   } else {
+
+                   }
+
+               } catch (Exception e) {
+                   e.printStackTrace();
+                   System.out.println("Error:" + e.toString());
+
+               }
        }
-        
+
     }
 
     @javafx.fxml.FXML
