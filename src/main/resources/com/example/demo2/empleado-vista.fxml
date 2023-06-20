@@ -24,7 +24,7 @@
       <Button fx:id="altavent" layoutX="46.0" layoutY="14.0" mnemonicParsing="false" onAction="#altaempleado" prefHeight="25.0" prefWidth="36.0" text="+" />
       <Button fx:id="reload" layoutX="219.0" layoutY="14.0" mnemonicParsing="false" onAction="#refrescar" prefHeight="25.0" prefWidth="36.0" text="🔃" />
       <Button fx:id="borrado" layoutX="102.0" layoutY="14.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="36.0" text="-" />
-      <Button fx:id="edicion" layoutX="166.0" layoutY="14.0" mnemonicParsing="false" onAction="#edicion" prefHeight="19.0" prefWidth="36.0" text="✏️" />
+
       <Label layoutX="43.0" layoutY="39.0" text="Agregar" />
       <Label layoutX="99.0" layoutY="39.0" text="Eliminar" />
       <Label layoutX="169.0" layoutY="39.0" text="Editar" />

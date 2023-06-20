@@ -1,15 +1,13 @@
 package com.example.demo2;
 
+import com.example.demo2.dao.EmpleadoDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -29,6 +27,7 @@ public class EmpleadoVista {
     private Connection conexionBBDD;
     @javafx.fxml.FXML
     private TableView tvEmpleado;
+    private EmpleadoDao empleadodao = new EmpleadoDao();
     private ObservableList<Empleado> datos;
     @javafx.fxml.FXML
     private TableColumn tcnumempcol;
@@ -125,49 +124,37 @@ public class EmpleadoVista {
     @javafx.fxml.FXML
     public void borrar(ActionEvent actionEvent) {
         Empleado empleadoaux = (Empleado) tvEmpleado.getSelectionModel().getSelectedItem();
-       if (empleadoaux==null){
-           Alert alert = new Alert(Alert.AlertType.ERROR);
-           alert.setHeaderText(null);
-           alert.setTitle("Fila no seleccionada");
-           alert.setContentText("No has seleccionado ninguna fila.");
-           alert.showAndWait();
-       }else {
+        String id = empleadoaux.getEmployeeNumber().toString();
+        Alert alert;
+        if (empleadoaux == null) {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Fila no seleccionada");
+            alert.setContentText("No has seleccionado ninguna fila.");
+            alert.showAndWait();
+        } else {
 
+            alert = new Alert(Alert.AlertType.CONFIRMATION, "¿ Desea borrar el empleado con el código '"
+                    + empleadoaux.getEmployeeNumber() + "' ?.", ButtonType.YES, ButtonType.NO);
 
-               int registrosAfectadosConsulta = 0;
+            alert.showAndWait();
+            if (alert.getResult() == ButtonType.YES) {
+                if (empleadodao.borrarEmpleado(empleadoaux)) {
+                    cargarDatosTabla();
+                } else {
+                    alert = new Alert(Alert.AlertType.INFORMATION, "No se ha encontrado un empleado con el código '"
+                            + empleadoaux.getEmployeeNumber() + "' .", ButtonType.OK );
+                    alert.showAndWait();
+                }
+            }else {
+                alert = new Alert(Alert.AlertType.INFORMATION, "Debe indicar el código del producto a borrar.", ButtonType.OK );
+                alert.showAndWait();
+            }
+        }
 
-               try {
-                   // Nos conectamos
-                   conexionBBDD = DriverManager.getConnection(servidor, usuario, passwd);
-                   String SQL = "DELETE FROM employee "
-                           + " WHERE employeenumber =  ";
-
-                   PreparedStatement st = conexionBBDD.prepareStatement(SQL);
-
-                   st.setString(1, String.valueOf(empleadoaux.getEmployeeNumber()));
-
-                   // Ejecutamos la consulta preparada (con las ventajas de seguridad y velocidad en el servidor de BBDD
-                   // nos devuelve el número de registros afectados. Al ser un Delete nos debe devolver 1 si se ha hecho correctamente
-                   registrosAfectadosConsulta = st.executeUpdate();
-                   st.close();
-                   conexionBBDD.close();
-
-                   if (registrosAfectadosConsulta == 1) {
-
-                   } else {
-
-                   }
-
-               } catch (Exception e) {
-                   e.printStackTrace();
-                   System.out.println("Error:" + e.toString());
-
-               }
-       }
 
     }
 
-    @javafx.fxml.FXML
-    public void edicion(ActionEvent actionEvent) {
-    }
 }
+
+
